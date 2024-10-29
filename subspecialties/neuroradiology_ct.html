@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuroradiology CT</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a href="../main.html">Main</a> > <a href="./neuroradiology_ct.html">Neuroradiology CT</a> 
+
+<h2>Neuroradiology CT</h2>
+
+<div class="dropdown">
+    <h2 onclick="toggleDropdown('notes')">Notes</h2>
+    <div class="dropdown-content" id="notes">
+        <ul>
+            <p>This is example of notes</p>
+        </ul>
+    </div>
+</div>
+
+<div class="dropdown">
+    <h2 onclick="toggleDropdown('links')">Links</h2>
+    <div class="dropdown-content" id="links">
+        <ul>
+            <li><a href="#">X-ray</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<script>
+    function toggleDropdown(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

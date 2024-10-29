@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiology Imaging Modalities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Radiology Imaging Modalities</h1>
+
+    <div class="dropdown">
+        <h2 onclick="toggleDropdown('neuroradiology')">Neuroradiology</h2>
+        <div class="dropdown-content" id="neuroradiology">
+            <ul>
+                <li><a href="subspecialties/neuroradiology_ct.html">CT Scan</a></li>
+                <li><a href="#">MRI</a></li>
+                <li><a href="#">PET Scan</a></li>
+                <li><a href="#">Angiography</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <h2 onclick="toggleDropdown('musculoskeletal')">Musculoskeletal Radiology</h2>
+        <div class="dropdown-content" id="musculoskeletal">
+            <ul>
+                <li><a href="#">X-ray</a></li>
+                <li><a href="#">MRI</a></li>
+                <li><a href="#">Ultrasound</a></li>
+                <li><a href="#">CT Scan</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <h2 onclick="toggleDropdown('abdominal')">Abdominal Radiology</h2>
+        <div class="dropdown-content" id="abdominal">
+            <ul>
+                <li><a href="#">Ultrasound</a></li>
+                <li><a href="#">CT Scan</a></li>
+                <li><a href="#">MRI</a></li>
+                <li><a href="#">Fluoroscopy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <h2 onclick="toggleDropdown('thoracic')">Thoracic Radiology</h2>
+        <div class="dropdown-content" id="thoracic">
+            <ul>
+                <li><a href="#">Echocardiography</a></li>
+                <li><a href="#">CT Angiography</a></li>
+                <li><a href="#">MRI</a></li>
+                <li><a href="#">Nuclear Medicine</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <h2 onclick="toggleDropdown('pediatric')">Pediatric Radiology</h2>
+        <div class="dropdown-content" id="pediatric">
+            <ul>
+                <li><a href="#">X-ray</a></li>
+                <li><a href="#">Ultrasound</a></li>
+                <li><a href="#">MRI</a></li>
+                <li><a href="#">CT Scan</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <h2 onclick="toggleDropdown('womens')">Womens Radiology</h2>
+        <div class="dropdown-content" id="womens">
+            <ul>
+                <li><a href="#">MRI Breast</a></li>
+                <li><a href="#">CT Scan Breast</a></li>
+                <li><a href="#">Pelvic US</a></li>
+                <li><a href="#">MRI Pelvis</a></li>
+                <li><a href="#">CT Pelvis</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <h2 onclick="toggleDropdown('interventional')">Interventional Radiology</h2>
+        <div class="dropdown-content" id="interventional">
+            <ul>
+                <li><a href="#">Flouroscopy</a></li>
+                <li><a href="#">CT Guided</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <h2 onclick="toggleDropdown('nuclear')">Nuclear Medicine</h2>
+        <div class="dropdown-content" id="nuclear">
+            <ul>
+                <li><a href="#">Flouroscopy</a></li>
+                <li><a href="#">CT Guided</a></li>
+            </ul>
+        </div>
+    </div>
+
+     <footer>
+        <div style="text-align: center; padding: 20px; background-color: #f0f0f0; border-top: 1px solid #ccc;">
+            <p>&copy; 2024 naterex.com</p>
+            <a href="about-me.html" style="text-decoration: none; color: #0073e6;">About Me</a>
+        </div>
+    </footer> 
+
+    <script>
+        function toggleDropdown(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
