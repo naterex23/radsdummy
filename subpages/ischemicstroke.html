@@ -42,6 +42,7 @@
   // Function to toggle a specific image container
   function toggleImage(imageId) {
     const imageContainer = document.getElementById(imageId);
+    imageContainer.style.display == 'none';
     // Toggle display for the selected image container
     if (imageContainer.style.display === 'none' || imageContainer.style.display === '') {
       imageContainer.style.display = 'block';
