@@ -14,3 +14,30 @@
 <p><a href="https://www.mdcalc.com/calc/3164/alberta-stroke-program-early-ct-score-aspects">MD calc ASPECTS</a></p>
 <p>M1 M2 M3 M4 M5 M6 (6 points for cortical) Insula, Caudate, Lentiform Nucleus, Internal Capsule (4 points subcortical)</p>
 <h1>Images</h1>
+
+
+<a href="#" onclick="toggleImage(); return false;">Dummy stroke image</a>
+<div id="image-container">
+  <img src="../photos/stroke.jpeg" alt="dummy stroke image">
+</div>
+
+
+
+<h1>Papers</h1>
+
+<p><a href="https://www.ahajournals.org/doi/full/10.1161/SVIN.123.001034">Nerinetide reduces early infarct growth</a></p>
+
+
+
+
+<script>
+  function toggleImage() {
+    const imageContainer = document.getElementById('image-container');
+    // Toggle visibility
+    if (imageContainer.style.display === 'none') {
+      imageContainer.style.display = 'block';
+    } else {
+      imageContainer.style.display = 'none';
+    }
+  }
+</script>

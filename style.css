@@ -111,3 +111,11 @@
         .disease-item a:hover {
           text-decoration: underline;
         }
+
+        #image-container {
+          margin-top: 10px; 
+          display: none; /* Hide image by default */
+        }
+        #image-container img {
+          max-width: 100%;
+          height: auto;
