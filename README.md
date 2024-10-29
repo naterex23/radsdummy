@@ -11,11 +11,9 @@ Welcome to my radiology notes collection. Here, you'll find organized notes cove
   Browse notes organized by different diseases and conditions, covering diagnostic approaches and key findings.
 
 - [Miscellaneous](miscellaneous.html)  
-  Additional resources and general information related to radiology.
+  Additional resources and general information related to radiology, or not.
 
 - [About Me](about-me.html)  
   Learn more about the author and their background in radiology.
 
 ---
-
-Feel free to reach out if you have any questions or comments about the content.
