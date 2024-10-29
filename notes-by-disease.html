@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disease Filters</title>
+  <style>
+    /* Basic styles for layout */
+    .filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .filter-tag {
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .system {
+      background-color: #3a34eb; /* Green for mammals */
+    }
+    .modality {
+      background-color: #0088ff; /* Green for mammals */
+    }
+    .organ {
+      background-color: #199e10; /* Blue for birds */
+    }
+    .region {
+      background-color: #10959e; /* Blue for birds */
+    }
+    /* Style for selected filter tags */
+    .filter-tag.selected {
+      background-color: #7a7f80;
+    }
+    .disease-list {
+      list-style: none;
+      padding: 0;
+    }
+    .disease-item {
+      display: none;
+      padding: 2px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .disease-item a {
+      text-decoration: none;
+      color: #333;
+    }
+    .disease-item a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Filter by Disease Features</h2>
+<!-- Filter Tags -->
+<div class="filter-container">
+  
+  <button class="filter-tag system" onclick="toggleFilter('neuro', this)">neuro</button>
+  <button class="filter-tag system" onclick="toggleFilter('interventional', this)">interventional</button>
+  <button class="filter-tag system" onclick="toggleFilter('thoracic', this)">thoracic</button>
+  <button class="filter-tag system" onclick="toggleFilter('MSK', this)">MSK</button>
+  <button class="filter-tag system" onclick="toggleFilter('peds', this)">Peds</button>
+  <button class="filter-tag system" onclick="toggleFilter('womens', this)">Womens</button>
+  <button class="filter-tag system" onclick="toggleFilter('nuclear', this)">Nuclear</button>
+  <button class="filter-tag modality" onclick="toggleFilter('CT', this)">CT</button>
+  <button class="filter-tag modality" onclick="toggleFilter('MRI', this)">MRI</button>
+  <button class="filter-tag modality" onclick="toggleFilter('US', this)">US</button>
+  <button class="filter-tag modality" onclick="toggleFilter('flouro', this)">Flouro</button>
+  <button class="filter-tag modality" onclick="toggleFilter('xray', this)">Xray</button>
+  <button class="filter-tag modality" onclick="toggleFilter('procedure', this)">Procedure</button>
+
+  <button class="filter-tag organ" onclick="toggleFilter('brain', this)">Brain</button>
+  <button class="filter-tag organ" onclick="toggleFilter('bones', this)">Bones</button>
+  <button class="filter-tag organ" onclick="toggleFilter('lungs', this)">Lungs</button>
+  <button class="filter-tag organ" onclick="toggleFilter('heart', this)">Heart</button>
+  <button class="filter-tag organ" onclick="toggleFilter('vascular', this)">Vascular</button>
+
+  <button class="filter-tag organ" onclick="toggleFilter('kidney', this)">Kidney</button>
+  <button class="filter-tag organ" onclick="toggleFilter('liver', this)">Liver</button>
+  <button class="filter-tag organ" onclick="toggleFilter('intestines', this)">Intestines</button>
+  <button class="filter-tag organ" onclick="toggleFilter('pancreas', this)">Pancreas</button>
+  <button class="filter-tag organ" onclick="toggleFilter('spleen', this)">Spleen</button>
+  <button class="filter-tag organ" onclick="toggleFilter('stomach', this)">Stomach</button>
+  <button class="filter-tag organ" onclick="toggleFilter('adrenals', this)">Adrenals</button>
+
+
+  <button class="filter-tag region" onclick="toggleFilter('head', this)">Head</button>
+  <button class="filter-tag region" onclick="toggleFilter('neck', this)">Neck</button>
+  <button class="filter-tag region" onclick="toggleFilter('chest', this)">Abdomen</button>
+  <button class="filter-tag region" onclick="toggleFilter('abdomen', this)">Abdomen</button>
+  <button class="filter-tag region" onclick="toggleFilter('pelvis', this)">Pelvis</button>
+  <button class="filter-tag region" onclick="toggleFilter('upper_extremity', this)">Arm</button>
+  <button class="filter-tag region" onclick="toggleFilter('lower_extremity', this)">Leg</button>
+
+
+  
+</div>
+
+<!-- List of Diseases -->
+<ul class="disease-list">
+  <li class="disease-item neuro brain interventional CT MRI procedure"><a href="ischemicStroke.html">Ischemic Stroke</a></li>
+  <li class="disease-item neuro brain interventional CT MRI"><a href="brainBleeds.html">Brain Bleeds</a></li>
+  <li class="disease-item neuro brain CT MRI"><a href="multipleSclerosis.html">Multiple Sclerosis</a></li>
+  <li class="disease-item neuro brain CT MRI"><a href="alzheimers.html">Alzheimers</a></li>
+  <li class="disease-item neuro brain CT MRI"><a href="parkinsons.html">Parkinsons</a></li>
+  <li class="disease-item womens CT MRI US"><a href="pregnancy.html">Pregnancy</a></li>
+
+
+
+
+</ul>
+
+
+
+<script>
+  // Store active filters
+  const activeFilters = new Set();
+
+  // Function to toggle filters and highlight tags
+  function toggleFilter(feature, element) {
+    if (activeFilters.has(feature)) {
+      activeFilters.delete(feature);
+      element.classList.remove('selected'); // Unhighlight tag
+    } else {
+      activeFilters.add(feature);
+      element.classList.add('selected'); // Highlight tag
+    }
+    filterDiseases();
+  }
+
+  function printAnimalList() {
+    const diseases = document.querySelectorAll('.disease-item');
+    const visibleDiseases = Array.from(diseases).filter(animal => animal.style.display === 'block');
+
+    console.log("Visible Diseases:");
+    visibleDiseases.forEach(animal => {
+      const animalName = animal.querySelector('a').textContent;
+      console.log(animalName);
+    });
+  }
+
+  // Function to filter diseases based on active filters
+  function filterDiseases() {
+  const diseases = document.querySelectorAll('.disease-item');
+  diseases.forEach(animal => {
+    const matches = Array.from(activeFilters).every(filter =>
+      animal.classList.contains(filter)
+    );
+    animal.style.display = matches ? 'block' : 'none';
+  });
+
+  // Print the updated list of diseases
+  printAnimalList();
+  }
+</script>
+
+<h3>List of diseases</h3>
+
+
+
+</body>
+</html>
