@@ -1,73 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Disease Filters</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
 
-<h2>Filter by Disease Features</h2>
-<!-- Filter Tags -->
-<div class="filter-container">
-  
-  <button class="filter-tag system" onclick="toggleFilter('neuro', this)">neuro</button>
-  <button class="filter-tag system" onclick="toggleFilter('interventional', this)">interventional</button>
-  <button class="filter-tag system" onclick="toggleFilter('thoracic', this)">thoracic</button>
-  <button class="filter-tag system" onclick="toggleFilter('MSK', this)">MSK</button>
-  <button class="filter-tag system" onclick="toggleFilter('peds', this)">Peds</button>
-  <button class="filter-tag system" onclick="toggleFilter('womens', this)">Womens</button>
-  <button class="filter-tag system" onclick="toggleFilter('nuclear', this)">Nuclear</button>
-  <button class="filter-tag modality" onclick="toggleFilter('CT', this)">CT</button>
-  <button class="filter-tag modality" onclick="toggleFilter('MRI', this)">MRI</button>
-  <button class="filter-tag modality" onclick="toggleFilter('US', this)">US</button>
-  <button class="filter-tag modality" onclick="toggleFilter('flouro', this)">Flouro</button>
-  <button class="filter-tag modality" onclick="toggleFilter('xray', this)">Xray</button>
-  <button class="filter-tag modality" onclick="toggleFilter('procedure', this)">Procedure</button>
+    <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Disease Filters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
 
-  <button class="filter-tag organ" onclick="toggleFilter('brain', this)">Brain</button>
-  <button class="filter-tag organ" onclick="toggleFilter('bones', this)">Bones</button>
-  <button class="filter-tag organ" onclick="toggleFilter('lungs', this)">Lungs</button>
-  <button class="filter-tag organ" onclick="toggleFilter('heart', this)">Heart</button>
-  <button class="filter-tag organ" onclick="toggleFilter('vascular', this)">Vascular</button>
+  <h2>Filter by Disease Features</h2>
+  <!-- Filter Tags -->
+  <div class="filter-container">
+    
+    <button class="filter-tag system" onclick="toggleFilter('neuro', this)">neuro</button>
+    <button class="filter-tag system" onclick="toggleFilter('interventional', this)">interventional</button>
+    <button class="filter-tag system" onclick="toggleFilter('thoracic', this)">thoracic</button>
+    <button class="filter-tag system" onclick="toggleFilter('MSK', this)">MSK</button>
+    <button class="filter-tag system" onclick="toggleFilter('peds', this)">Peds</button>
+    <button class="filter-tag system" onclick="toggleFilter('womens', this)">Womens</button>
+    <button class="filter-tag system" onclick="toggleFilter('nuclear', this)">Nuclear</button>
+    <button class="filter-tag modality" onclick="toggleFilter('CT', this)">CT</button>
+    <button class="filter-tag modality" onclick="toggleFilter('MRI', this)">MRI</button>
+    <button class="filter-tag modality" onclick="toggleFilter('US', this)">US</button>
+    <button class="filter-tag modality" onclick="toggleFilter('flouro', this)">Flouro</button>
+    <button class="filter-tag modality" onclick="toggleFilter('xray', this)">Xray</button>
+    <button class="filter-tag modality" onclick="toggleFilter('procedure', this)">Procedure</button>
 
-  <button class="filter-tag organ" onclick="toggleFilter('kidney', this)">Kidney</button>
-  <button class="filter-tag organ" onclick="toggleFilter('liver', this)">Liver</button>
-  <button class="filter-tag organ" onclick="toggleFilter('intestines', this)">Intestines</button>
-  <button class="filter-tag organ" onclick="toggleFilter('pancreas', this)">Pancreas</button>
-  <button class="filter-tag organ" onclick="toggleFilter('spleen', this)">Spleen</button>
-  <button class="filter-tag organ" onclick="toggleFilter('stomach', this)">Stomach</button>
-  <button class="filter-tag organ" onclick="toggleFilter('adrenals', this)">Adrenals</button>
+    <button class="filter-tag organ" onclick="toggleFilter('brain', this)">Brain</button>
+    <button class="filter-tag organ" onclick="toggleFilter('bones', this)">Bones</button>
+    <button class="filter-tag organ" onclick="toggleFilter('lungs', this)">Lungs</button>
+    <button class="filter-tag organ" onclick="toggleFilter('heart', this)">Heart</button>
+    <button class="filter-tag organ" onclick="toggleFilter('vascular', this)">Vascular</button>
 
-
-  <button class="filter-tag region" onclick="toggleFilter('head', this)">Head</button>
-  <button class="filter-tag region" onclick="toggleFilter('neck', this)">Neck</button>
-  <button class="filter-tag region" onclick="toggleFilter('chest', this)">Abdomen</button>
-  <button class="filter-tag region" onclick="toggleFilter('abdomen', this)">Abdomen</button>
-  <button class="filter-tag region" onclick="toggleFilter('pelvis', this)">Pelvis</button>
-  <button class="filter-tag region" onclick="toggleFilter('upper_extremity', this)">Arm</button>
-  <button class="filter-tag region" onclick="toggleFilter('lower_extremity', this)">Leg</button>
+    <button class="filter-tag organ" onclick="toggleFilter('kidney', this)">Kidney</button>
+    <button class="filter-tag organ" onclick="toggleFilter('liver', this)">Liver</button>
+    <button class="filter-tag organ" onclick="toggleFilter('intestines', this)">Intestines</button>
+    <button class="filter-tag organ" onclick="toggleFilter('pancreas', this)">Pancreas</button>
+    <button class="filter-tag organ" onclick="toggleFilter('spleen', this)">Spleen</button>
+    <button class="filter-tag organ" onclick="toggleFilter('stomach', this)">Stomach</button>
+    <button class="filter-tag organ" onclick="toggleFilter('adrenals', this)">Adrenals</button>
 
 
-  
-</div>
+    <button class="filter-tag region" onclick="toggleFilter('head', this)">Head</button>
+    <button class="filter-tag region" onclick="toggleFilter('neck', this)">Neck</button>
+    <button class="filter-tag region" onclick="toggleFilter('chest', this)">Abdomen</button>
+    <button class="filter-tag region" onclick="toggleFilter('abdomen', this)">Abdomen</button>
+    <button class="filter-tag region" onclick="toggleFilter('pelvis', this)">Pelvis</button>
+    <button class="filter-tag region" onclick="toggleFilter('upper_extremity', this)">Arm</button>
+    <button class="filter-tag region" onclick="toggleFilter('lower_extremity', this)">Leg</button>
+    
+  </div>
+  <!-- List of Diseases -->
+  <ul class="disease-list">
+  <li class="disease-item MSK  Bone"><a href="wrist_fracture.html">Wrist Fracture</a></li>
+<li class="disease-item Neuro  MRI  CT  Neuro"><a href="broken_brain.html">Broken Brain</a></li>
 
-<!-- List of Diseases -->
-<ul class="disease-list">
-  <li class="disease-item neuro brain interventional CT MRI procedure"><a href="subpages/ischemicstroke.html">Ischemic Stroke</a></li>
-  <li class="disease-item neuro brain interventional CT MRI"><a href="brainBleeds.html">Brain Bleeds</a></li>
-  <li class="disease-item neuro brain CT MRI"><a href="multipleSclerosis.html">Multiple Sclerosis</a></li>
-  <li class="disease-item neuro brain CT MRI"><a href="alzheimers.html">Alzheimers</a></li>
-  <li class="disease-item neuro brain CT MRI"><a href="parkinsons.html">Parkinsons</a></li>
-  <li class="disease-item MSK xray MRI lower_extremity bones"><a href="synovialchondromatosis.html">Synovial Chondromatosis</a></li>
-  <li class="disease-item womens CT MRI US"><a href="pregnancy.html">Pregnancy</a></li>
 
+  </ul>
 
-
-</ul>
-
-<script>
+  <script>
   // Store active filters
   const activeFilters = new Set();
 
@@ -107,9 +99,10 @@
   // Print the updated list of diseases
   printAnimalList();
   }
-</script>
+  </script>
 
-<p><a href="https://www.naterex.com">Return Home</a></p>
+  <p><a href="https://www.naterex.com">Return Home</a></p>
 
-</body>
-</html>
+  </body>
+  </html>
+  
