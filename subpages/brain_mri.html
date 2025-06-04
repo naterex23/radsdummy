@@ -1,0 +1,50 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>brain_mri</title>
+      <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+
+  <a href="https://naterex.com">Main</a> > <a href="../notes-by-disease.html">Notes by disease</a> > <a href="./brain_mri.html">Brain MRI Notes</a> 
+
+  <h1>Notes</h1>
+  <p>Most brain lesions are hyPOintense on T1 images due to LONGER longitudinal recover. hyPERintense lesion generally include Fat or proteinaceous materla or methemeglobin or melanin or minerals. </p>
+<p> Most brain lesion are hyPERintense on T2 due to water or edema causing T2 prolongation. HyPOintensity on T2 is generally caused by BLOOD (deoxyhemoglobin or intracellular methemeglobin or hemosiderin) or calcification or fibrous tissue or highly cellular tumors or desicatted secretions </p>
+<p> FLAIR --- T1 can be distinguished from FLAIR because normal white matter is HYPERintense due to fatty myelination or whereas in FLAIR white matter is DARKER than gray. </p>
+<p> Proton Density or PD - used mainly of spinal cord to evaluate MS </p>
+<p> DWI - depicts brownian motion of water protons or signal lost with INCREASING diffusion. CSF (free water) is dark because its just bouncing around. Ischemia cause REDUCED signal LOSS (stuff isn't moving if its dead). b-value sets the degree of diffusion weighting - higher B value = MORE contrast. Increasing the B value reduces the signal / noise ratio. TRACE = summation of source images or reduced diffusion is BRIGHT. ADC MAP shows pure diffusion info without T2 weighting. DTI depicts directional asymmetries (anisotropy) or inherent in white matter tracts. </p>
+<p> T2 shinethrough occurs becasue DWI images are T2 weighted and lesions with long T2 relatxation will be hyperintense (especially w/ low B value). </p>
+<p> While stroke is the most common disease evaluated w/ DWI or see the photo for other examples. </p>
+<p> GRE + SWI - SWI is useful in distinguishing between paramagnetic and diamagnetic  substances (blood / iron vs. calcification). DDX of dark spots on GRE/SWI are microhemorrhages - hypertensive microangiopathy or CAA or familial cerebral cavernous malformation syndrome or radiation induced cerebral vasculopathy or DIA or hemorrhagic mets or fat embolism or cardiac surgery. </p>
+<p> MRS - magnetic resonance spectroscopy - Uh... come back to this. </p>
+<p> MR Perfusion - CBF or CBV or MTT = CBV/CBF or TTP = time to peak. High grade gliomas and mets have higher relative CBV compared to low grade gliomoas or lymphoma. </p>
+
+
+  <h1>Links</h1>
+  
+
+  <h1>Images</h1>
+  <a href="#" onclick="toggleImage('imageDWI Pathologies other than stroke'); return false;">DWI Pathologies other than stroke</a><br>
+<div id="imageDWI Pathologies other than stroke" class="image-container">
+  <img src="../photos/dwi_pathologies.jpg" alt="Description: DWI Pathologies other than stroke"></div>
+
+
+  <script>
+    // Function to toggle a specific image container
+    function toggleImage(imageId) {
+      const imageContainer = document.getElementById(imageId);
+      imageContainer.style.display == 'none';
+      // Toggle display for the selected image container
+      if (imageContainer.style.display === 'none' || imageContainer.style.display === '') {
+        imageContainer.style.display = 'block';
+      } else {
+        imageContainer.style.display = 'none';
+      }
+    }
+  </script>
+
+  
